@@ -1,18 +1,18 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/datajpa # ?? db
+    url: jdbc:h2:tcp://localhost/~/datajpa # db url
     username: sa
     password:
-    driver-class-name: org.h2.Driver # h2 db ??
+    driver-class-name: org.h2.Driver # using h2 db
 
   jpa:
     hibernate:
-      ddl-auto: create # app ??? ? table drop ?? ?? ?? (drop-first ????)
+      ddl-auto: create # when app loading, table drop ( like drop-first: true )
     properties:
       hibernate:
-        # show_sql: true  # jpa ????? console? ? ????
-        format_sql: true  # ??? ??
+        # show_sql: true  # write jpa query, at console
+        format_sql: true  # formatting sql => prettier
 
 logging.level:
-  org.hibernate.SQL: debug # jpa ????? log? ????
-# org.hibernate.type: trace # param?? ??
+  org.hibernate.SQL: debug # write jpa query, at log file
+# org.hibernate.type: trace # write jpa query with param
